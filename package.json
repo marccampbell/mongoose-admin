@@ -1,0 +1,16 @@
+{
+    "name": "mongoose-admin"
+  , "description": "automatic admin tool and admin pages for mongoose"
+  , "keywords": ["mongoose", "mongo", "admin"]
+  , "version": "0.0.1"
+  , "homepage": "http://www.github.com/marccampbell/mongoose-admin"
+  , "repository": "git://github.com/marccampbell/mongoose-admin.git"
+  , "author": "Marc Campbell <marc.e.campbell@gmail.com> (http://twitter.com/mccode)"
+  , "main": "index"
+  , "dependencies": { "mongoose": ">= 0.6.9"
+    , "express": "2.3.12"
+    , "jade": "0.13.0" },
+  , "devDependencies": { "should": "0.2.x" }
+  , "engines": { "node": "*" }
+}
+

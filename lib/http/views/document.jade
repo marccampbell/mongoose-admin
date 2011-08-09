@@ -1,0 +1,59 @@
+div#page-heading
+  h1 An entity from the <em>#{modelName}</em> collection
+div#content-table(width='100%', cellspacing='0', cellpadding='0', border='0')
+  table#content-table(width='100%', cellspacing='0', cellpadding='0', border='0')
+    tbody
+      tr
+        th.sized(rowspan='3')
+          img(width='20', height='300', src='/images/shared/side_shadowleft.jpg')
+        th.topleft
+        td#tbl-border-top &nbsp;
+        th.topright
+        th.sized(rowspan='3')
+          img(width='20', height='300', src='/images/shared/side_shadowright.jpg')
+      tr
+        td#tbl-border-left
+        td
+          div#content-table-inner
+            table(width='100%', cellspacing='0', cellpadding='0', border='0')
+              tbody
+                tr(valign='top')
+                  td
+                    table#id-form(cellspacing='0', cellpadding='0', border='0')
+                      tbody
+                        - for (var field in model.schema.paths)
+                          - if (field != '_id')
+                            tr
+                              th(valign='top') #{field}
+                              td
+                                - if (model.schema.paths[field].options.type.toString().indexOf('Number') != -1) {
+                                  - if (document[field])
+                                    input.inp-form(type='text', value='#{document[field]}')
+                                  - else
+                                    input.inp-form(type='text')
+                                - } else if (model.schema.paths[field].options.type.toString().indexOf('String') != -1) {
+                                  - if (document[field])
+                                    input.inp-form(type='text', value='#{document[field]}')
+                                  - else
+                                    input.inp-form(type='text')
+                                - } else if (model.schema.paths[field].options.type.toString().indexOf('Date') != -1) {
+                                  | (date)
+                                - } else {
+                                  | #{document[field]}
+                                - }
+                              td
+                        tr
+                          th &nbsp;
+                          td(valign='top')
+                            input.form-submit(type='button')
+                tr
+                  td
+                    img(width='695', height='1', src='/images/shared/blank.gif')
+                  td
+            div.clear
+        td#tbl-border-right
+      tr
+        th.sized.bottomleft
+        td#tbl-border-bottom &nbsp;
+        th.sized.bottomright
+div.clear

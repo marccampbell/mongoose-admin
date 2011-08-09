@@ -1,0 +1,60 @@
+body#login-bg
+  script(type='text/javascript')
+    $(document).ready(function() {
+      $('#loginButton').click(function(e) {
+        var postData = 'username=' + encodeURIComponent($('#username').val()) +
+                       '&password=' + encodeURIComponent($('#password').val());
+        $.ajax({
+          type:'POST',
+          url:'/json/login',
+          data:postData,
+          success:function(result) {
+            window.location.href = '/';
+          },
+          error:function(xhr, textStatus) {
+            alert(textStatus);
+          }
+        });
+      });
+    });
+  div#login-holder
+    div#logo-login
+      a(href='/')
+        img(src='/images/logo.png', width='46', height='46')
+    div.clear
+    div#loginbox
+      div#login-inner
+        table(border='0', cellpadding='0', cellspacing='0')
+          tr
+            th Username
+            td
+              input#username.login-inp(type='text')
+          tr
+            th Password
+            td 
+              input#password.login-inp(type='password', onfocus='this.value=""')
+          tr
+            th
+            td(valign='top')
+              input#login-check.checkbox-size(type='checkbox')
+              label(for='login-check') Remember me
+          tr
+            th
+            td
+              input#loginButton.submit-login(type='button')
+      div.clear
+      a.forgot-pwd(href='') Forgot Password?
+    div#forgotbox
+      div#forgotbox-text Please enter your username
+      div#forgot-inner
+        table(border='0', cellpadding='0', cellspacing='0')
+          tr
+            th Username:
+            td
+              input.login-inp(type='text')
+          tr
+            th
+            td
+              input.submit-login(type='button')
+      div.clear
+      a.back-login(href='') Back to login
