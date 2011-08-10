@@ -1,11 +1,5 @@
 div#content.container_16.clearfix
-  div.grid_16.clearboth
-    - for (var field in model.schema.paths) 
-      p
-        span.document_label
-          label.inline_label(for='#{field}')
-            | #{field}
-        input.document_input(id='#{field}', type='text', name='#{field}')
+  div.grid_16.clearboth!= renderedDocument
   div.grid_16.clearboth
     p.submit
       input#saveButton(type='submit', value='Save')
@@ -13,5 +7,3 @@ div#content.container_16.clearfix
       input#cancelButton(type='button', value='Cancel')
 div#foot
   a(href='http://mongoose-admin.com') Mongoose-Admin
-
-

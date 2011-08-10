@@ -223,8 +223,14 @@ input.document_input {
     width:200px;
 }
 
-label.inline_label {
+label.required_label {
     display:inline;
+    font-weight:bold;
+}
+
+label.optional_label {
+    display:inline;
+    font-weight:normal;
 }
 
 .document_label {
