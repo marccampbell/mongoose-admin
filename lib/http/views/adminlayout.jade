@@ -1,34 +1,18 @@
+!!! 5
 html(lang='en')
   head
-    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-    title Site Admin
-    link(rel='stylesheet', href='/css/screen.css', type='text/css', media='screen')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', type='text/javascript')
-    script(src='/js/custom-jquery.js', type='text/javascript')
-    script(src='/js/jquery.pngFix.pack.js', type='text/javascript')
-body
-  div#page-top-outer
-    div#page-top
-      div#logo
-        a(href='/')
-          img(src='/images/logo.png', width='40', height='40')
-      div.clear
-  div.clear
-  div.nav-outer-repeat
-    div.nav-outer
-      div#nav-right
-        div.nav-divider &nbsp;
-        a#logout(href='/logout')
-          img(src='/images/shared/nav/nav_logout.gif', width='64', height='14')
-        div.clear
-      div.nav
-        div.table
-          ul.select
-            - each model in models
-              li
-                a(href='/model/#{model.collection.name}') <b>#{model.collection.name}</b>
-    div.clear
-  div.clear
-  div#content-outer
-    div#content!= body
-
+    meta(http-equiv='Content-type', content='text/html; charset=utf-8')
+    title!= pageTitle
+    link(rel='stylesheet', href='/css/960.css', type='text/css', media='screen', charset='utf-8')
+    link(rel='stylesheet', href='/css/template.css', type='text/css', media='screen', charset='utf-8')
+    link(rel='stylesheet', href='/css/colour.css', type='text/css', media='screen', charset='utf-8')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js');
+  body
+    h1#head Mongoose-Admin
+    ul#navigation
+      li
+        span.active Models
+      li
+        span.right 
+          a(href='/logout') Logout
+!= body
