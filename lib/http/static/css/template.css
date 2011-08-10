@@ -240,3 +240,35 @@ label.optional_label {
     text-align:right;
     margin-right:10px;
 }
+
+.inline_element {
+    font-size:12px;
+    width:130px;
+};
+
+.document_date {
+    clear:right;
+    font-size:12px;
+    position:relative;
+    top:4px;
+}
+
+.document_other {
+    clear:right;
+    font-size:12px;
+    position:relative;
+    top:4px;
+    color:#aaa;
+}
+
+.document_object {
+    clear:right;
+    font-size:12px;
+    background-color:#eee;
+    color:#000;
+    border:1px solid #ccc;
+    margin-top:4px;
+    width:600px;
+    float:left;
+    padding-top:14px;
+}
