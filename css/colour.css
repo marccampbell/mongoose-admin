@@ -1,5 +1,6 @@
 body {
-	background: #313230 url(/images/body.png) repeat-x top center; /* #F7F4E9 */
+	background: #313230 url(/images/body.png) repeat-x top center;
+    font-family: 'Actor', sans-serif;; /* #F7F4E9 */
 }
 small {
 	color:#888
@@ -37,6 +38,14 @@ input, select, textarea {
 
 h1,h2,h3,h4,h5,h6 {
 	border-color:#ddd
+}
+
+h4 {
+    text-align:center;
+}
+
+h3 {
+    margin-top:20px;
 }
 
 a {

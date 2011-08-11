@@ -3,8 +3,13 @@
 }
 
 ol {
-	padding:10px;
 	margin:0;
+    list-style-type:square;
+    width:auto;
+}
+
+li {
+    display:inline block;
 }
 
 caption {
@@ -16,7 +21,7 @@ caption {
 #content {
 	margin-right:auto;
 	margin-left:auto;
-	width:1000px;
+	width:500px;
 }
 
 .login {
@@ -267,4 +272,17 @@ label.optional_label {
     width:600px;
     float:left;
     padding-top:14px;
+}
+
+.sample_code {
+    background-color:#ccc;
+    border: 1px solid #aaa;
+    margin-right:250px;
+    margin-left:250px;
+    padding:10px;
+}
+
+.about {
+    margin-left:60px;
+    padding-bottom:40px;
 }
