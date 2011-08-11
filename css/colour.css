@@ -1,5 +1,5 @@
 body {
-	background:#F7F4E9 url(/images/body.png) repeat-x top center;
+	background: #313230 url(/images/body.png) repeat-x top center; /* #F7F4E9 */
 }
 small {
 	color:#888
@@ -10,8 +10,11 @@ th,#navigation,.active,input[type=submit],.pagination a:hover,.date td a:hover {
 	color:#fff
 }
 
-select, textarea, input, td, #content, #foot {
-	background:#fff url(/images/gradient.png) repeat-x 0 -28px
+#content, #foot {
+    background:#F7F4E9 url(/images/gradient.png) repeat-x 0 -28px;
+}
+select, textarea, input, td {
+	background:#fff url(/images/gradient.png) repeat-x 0 -28px;
 }
 tr {
 	background-position:0 -18px;
