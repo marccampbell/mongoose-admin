@@ -6,7 +6,7 @@ small {
 	color:#888
 }
 
-th,#navigation,.active,input[type=submit],.pagination a:hover,.date td a:hover {
+th,#navigation,.active,input[type=button],.pagination a:hover,.date td a:hover {
 	background:#434A48;
 	color:#fff
 }

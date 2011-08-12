@@ -28,19 +28,46 @@
 				<div class="grid_16 clearboth">
 					<h4>A front end to <a href="http://mongoosejs.com">Mongoose</a> - the ORM for <a href="http://nodejs.org">Node.js</a> and <a href="http://mongodb.org">MongoDB</a></h4>
                     <div class='sample_code'>
-                        <code>
-						    var admin = require('mongoose-admin').createAdmin();<br />
-						    admin.registerModel(BlogPostFields);
-                          </code>
+                      <pre>
+var AuthorModel = {
+  name: {type: String, required:true},
+  bio: {type: String}
+};
+
+var Author = new mongoose.Schema(AuthorModel);
+mongoose.model('Author', Author);
+
+var admin = mongoose-admin.createAdmin('mongodb://localhost/bookstore', 8001);
+admin.ensureUserExists('admin', 'my-secret-p@ssw0rd');
+admin.registerModel('Author', AuthorModel, {list:['name'], sort['name']});</pre>
+                    </div>
+                    <div class='button_nav'>
+                        <p class='submit'>
+                            <a href='#features'><input type='button' value='Features' /></a>
+                            <a href='#github'><input type='button' value='GitHub' /></a>
+                            <a href='#screenshots'><input type='button' value='Screenshots' /></a>
+                            <a href='#contributors'><input type='button' value='Contributors' /></a>
+                        </p>
                     </div>
                     <div class='about'>
-					<h3>Features</h3>
+                        <a name='features'></a><h3>Features</h3>
                         <ol>
                             <li>Automatic forms</li>
                             <li>Supports nested objects</li>
                             <li>Uses only public mongoose apis</li>
                         </ol>
-                        <h3>Contributors</h3>
+                        <a name='github'></a><h3>GitHub</h3>
+                        <ol>
+                            <li><a href='http://github.com/marccampbell/mongoose-admin'>marccampbell/mongoose-admin</a></li>
+                            <li><a href='http://github.com/marccampbell/mongoose-admin/issues'>Issues</a></li>
+                        </ol>
+                        <a name='screenshots'></a><h3>Screenshots</h3>
+                        <ol class='screenshots'>
+                            <li>Login<br /><img src='./images/screenshots/login.png' /></li>
+                            <li>Models<br /><img src='./images/screenshots/models.png' /></li>
+                            <li>Document<br /><img src='./images/screenshots/document.png' /></li>
+                        </ol>
+                        <a name='contributors'></a><h3>Contributors</h3>
                         <ol>
                             <li>Marc Campbell (<a href="http://github.com/marccampbell">marccampbell</a>)</li>
                         <h3>More Information</h3>
