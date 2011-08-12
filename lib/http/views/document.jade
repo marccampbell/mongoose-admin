@@ -1,6 +1,20 @@
 script(type='text/javascript')
   $(document).ready(function() {
-    console.log($('#document').serialize());
+    $('#saveButton').click(function() {
+      var method = $('#document_id').val().length > 0 ? 'PUT' : 'POST';
+      $.ajax({
+        type:method,
+        url:'/json/model/#{modelName}/document',
+        data:$('#document').serialize(),
+        success:function(result) {
+          window.location.href = '/model/' + result.model.collectionName;
+        },
+        error:function(xhr, textStatus) {
+          alert('Unable to save');
+        }
+      });
+      return false;
+    });
   });
 
 div#content.container_16.clearfix
