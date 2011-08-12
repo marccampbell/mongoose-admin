@@ -9,7 +9,7 @@
   , "main": "index"
   , "dependencies": { "mongoose": ">= 0.6.9"
     , "express": "2.3.12"
-    , "jade": "0.13.0" },
+    , "jade": "0.13.0" }
   , "devDependencies": { "should": "0.2.x" }
   , "engines": { "node": "*" }
 }
