@@ -1,33 +1,29 @@
-div#page-heading
-  h1 #{modelName}
-  p
-    | (<a href='/model/#{modelName}/document/new'>Create new <em>"#{modelName}"</em> item...</a>)
-div#content-table(width='100%', cellspacing='0', cellpadding='0', border='0')
-  table#document-table(width='100%', cellspacing='0', cellpadding='0', border='0')
-    tr
-      th.table-header-check
-        a#toggle-all
-      - for (var i = 0; i < listFields.length; i++) {
-        th.table-header-repeat.line-left.minwidth-1
-          a(href='#') #{listFields[i]}
-      - }
+div#content.container_16.clearfix
+  div#page-heading
+    h1 #{modelName}
+  div.grid_11
+    table
+      tr
+        th &nbsp;
+        - for (var i = 0; i < listFields.length; i++) {
+          th.table-header-repeat.line-left.minwidth-1
+            a(href='#') #{listFields[i]}
+        - }
       - for (var j = 0; j < documents.length; j++) {
-        - if (j % 2)
-          tr.alternate-row
-        - else
-          tr
-        td
-          input.ui-helper-hidden-accessible(type='checkbox')
-          span.ui-checkbox
-        - for (var k = 0; k < listFields.length; k++) {
+        tr
+          td
+            input(type='checkbox', style='width:auto')
+          - for (var k = 0; k < listFields.length; k++) {
             td
-              - if (k === 0)
+              - if (k === 0) 
                 a(href='/model/#{modelName}/document/#{documents[j]._id}') #{documents[j][listFields[k]]}
               - else
                 #{documents[j][listFields[k]]}
-        - }
+          - }
       - }
-div.clear
-
-
-
+    p
+      | <a href='/model/#{modelName}/document/new'>Create new <em>"#{modelName}"</em> item...</a>
+  div.grid_5
+    h2 Recent Activity
+    p
+      | This is not implemented
