@@ -9,7 +9,7 @@ require('./common');
 
 var admin = mongoose_admin.createAdmin('localhost://mongodb/test', 8001);
   
-process.cwd().should.include.string('mongoose-admin/test');
+process.cwd().should.include.string('mongoose-admin');
 http.get({ host: 'localhost', port: 8001 }, function(res) {
     res.on('data', function(chunk) {
     });

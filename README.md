@@ -27,7 +27,7 @@ $ npm install
 Then:
 
 ```bash
-$ make test
+$ test/run
 ```
 
 Actively tested with node:

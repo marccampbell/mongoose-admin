@@ -7,7 +7,7 @@ var mongoose_admin = require('../')
   , mongoose = require('mongoose')
   , should = require('should');
 
-process.cwd().should.include.string('mongoose-admin/test');
+process.cwd().should.include.string('mongoose-admin');
 
 var modelData = {
     stringField:{type:String},
