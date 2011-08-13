@@ -27,6 +27,42 @@ script(type='text/javascript')
         }
       });
     });
+
+    $('.linked_model').change(function() {
+      var self = $(this);
+      if ($(this).val().length === 0) {
+        $('#' + self.attr('rel')).hide();
+      } else {
+        $.ajax({
+          type:'GET',
+          url:'/json/model/' + $(this).val() + '/linkedDocumentsList',
+          success:function(result) {
+            console.log(self.attr('rel'));
+            var documentList = $('#' + self.attr('rel'));
+            documentList.show();
+            documentList.empty();
+            $.each(result, function(k, v) {
+              var itemDisplay = '';
+              for (field in v) {
+                if (field != '_id') {
+                  if (itemDisplay.length > 0) {
+                    itemDisplay += ' -- ';
+                  }
+                  itemDisplay += v[field];
+                }
+              }
+
+              var option = $('<option />').attr('value', v['_id']).html(itemDisplay);
+              documentList.append(option);
+            });
+            documentList.show();
+          },
+          error:function(xhr, textStatus) {
+            alert('Unable to get documents');
+          }
+        });
+      }
+    });
   });
 
 div#content.container_16.clearfix

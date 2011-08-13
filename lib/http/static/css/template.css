@@ -272,3 +272,14 @@ label.optional_label {
     float:left;
     padding-top:14px;
 }
+
+select.linked_model {
+    width:auto;
+    float:left;
+}
+
+select.linked_document {
+    width:auto;
+    float:left;
+    display:none;
+}
