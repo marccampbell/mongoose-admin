@@ -1,0 +1,17 @@
+#!/bin/sh
+
+clean() {
+  killall -KILL node &> /dev/null
+}
+
+clean
+echo
+
+files=./test.*.js
+for file in $files; do
+  printf "\033[90m   ${file#test/}\033[0m "
+  node $@ $file && echo "\033[36m✓\033[0m"
+  test $? -eq 0 || exit $?
+done
+echo
+
