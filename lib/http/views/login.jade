@@ -1,6 +1,29 @@
 script(type='text/javascript')
   $(document).ready(function() {
+    $('#username').focus();
+
+    $('#password').keypress(function(e) {
+        var keycode;
+        if (window.event) {
+          keycode = window.event.keyCode;
+        } else if (e) {
+          keycode = e.which;
+        } else {
+          return true;
+        }
+
+        if (keycode == 13) {
+          doLogin();
+        }
+    });
     $('#loginButton').click(function(e) {
+      doLogin();
+    });
+    $('#passwordButton').click(function(e) {
+      alert('This feature is not implemented');
+    });
+
+    doLogin = function() {
       var postData = 'username=' + encodeURIComponent($('#username').val()) +
                      '&password=' + encodeURIComponent($('#password').val());
       $.ajax({
@@ -14,10 +37,7 @@ script(type='text/javascript')
           alert(textStatus);
         }
       });
-    });
-    $('#passwordButton').click(function(e) {
-      alert('This feature is not implemented');
-    });
+    };
   });
 div.grid_16.clearboth.center
   p
