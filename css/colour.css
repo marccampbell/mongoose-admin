@@ -1,20 +1,21 @@
 body {
-	background: #313230 url(/images/body.png) repeat-x top center; /* #F7F4E9 */
+	background: #313230 url(./images/body.png) repeat-x top center;
+    font-family: 'Actor', sans-serif;; /* #F7F4E9 */
 }
 small {
 	color:#888
 }
 
-th,#navigation,.active,input[type=submit],.pagination a:hover,.date td a:hover {
+th,#navigation,.active,input[type=button],.pagination a:hover,.date td a:hover {
 	background:#434A48;
 	color:#fff
 }
 
 #content, #foot {
-    background:#F7F4E9 url(/images/gradient.png) repeat-x 0 -28px;
+    background:#F7F4E9 url(./images/gradient.png) repeat-x 0 -28px;
 }
 select, textarea, input, td {
-	background:#fff url(/images/gradient.png) repeat-x 0 -28px;
+	background:#fff url(./images/gradient.png) repeat-x 0 -28px;
 }
 tr {
 	background-position:0 -18px;
@@ -39,14 +40,22 @@ h1,h2,h3,h4,h5,h6 {
 	border-color:#ddd
 }
 
+h4 {
+    text-align:center;
+}
+
+h3 {
+    margin-top:20px;
+}
+
 a {
 	color:#888
 }
 a.edit {
-	background-image:url(/images/edit.png)
+	background-image:url(./images/edit.png)
 }
 a.delete {
-	background-image:url(/images/trash.png)
+	background-image:url(./images/trash.png)
 }
 
 #head {
@@ -65,7 +74,7 @@ a.delete {
 	border-color:#eee
 }
 .box > h2 {
-	background:url(/images/box-h2.png) repeat-x bottom center #fff
+	background:url(./images/box-h2.png) repeat-x bottom center #fff
 }
 
 .error,.success,.info,.error a,.success a,.info a {
@@ -81,3 +90,4 @@ a.delete {
 .glow-sortable-dropindicator {
 	background:#eee
 }
+
