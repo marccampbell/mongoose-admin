@@ -8,6 +8,15 @@
 $ npm install mongoose-admin
 ```
 
+## Known Issues
+
+  - date fields are not editable
+  - nested objects which contain nested objects cannot be created on new
+    documents
+  - not compatible with app-cluster.js yet
+  - no pagination of documents when listing
+
+
 ## Features
 
   - automatic templates for 
