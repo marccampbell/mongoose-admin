@@ -7,9 +7,15 @@
   , "repository": "git://github.com/marccampbell/mongoose-admin.git"
   , "author": "Marc Campbell <marc.e.campbell@gmail.com> (http://twitter.com/mccode)"
   , "main": "index"
-  , "dependencies": { "mongoose": ">= 0.6.9"
-    , "express": "2.3.12"
-    , "jade": "0.13.0" }
+  , "dependencies": { "mongoose": ">= 1.8.1"
+    , "express": ">= 2.3.12"
+    , "jade": ">= 0.13.0"
+    , "bcrypt": ">= 0.2.4"
+    , "connect": ">= 1.6.1"
+    , "jquery": ">= 1.6.2"
+    , "winston": ">= 0.3.5"
+    , "node-uuid": ">= 1.2.0"
+    , "mongodb": ">= 0.9.6-10" }
   , "devDependencies": { "should": "0.2.x" }
   , "engines": { "node": "*" }
 }
