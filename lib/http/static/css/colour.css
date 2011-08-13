@@ -10,6 +10,11 @@ th,#navigation,.active,input[type=submit],.pagination a:hover,.date td a:hover {
 	color:#fff
 }
 
+input#deleteButton[type=button] {
+    background:#aa0000;
+    color:#fff;
+}
+
 select, textarea, input, td, #content, #foot {
 	background:#fff url(/images/gradient.png) repeat-x 0 -28px
 }

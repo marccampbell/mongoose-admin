@@ -15,6 +15,18 @@ script(type='text/javascript')
       });
       return false;
     });
+    $('#deleteButton').click(function() {
+      $.ajax({
+        type:'DELETE',
+        url:'/json/model/#{modelName}/document?document_id=' + encodeURIComponent($('#document_id').val()),
+        success:function(result) {
+          window.location.href = '/model/' + result.collection;
+        },
+        error:function(xhr, textStatus) {
+          alert('Unable to delete');
+        }
+      });
+    });
   });
 
 div#content.container_16.clearfix
@@ -24,5 +36,8 @@ div#content.container_16.clearfix
       input#saveButton(type='submit', value='Save')
       | &nbsp;
       input#cancelButton(type='button', value='Cancel')
+      - if (allowDelete)
+          span(style='margin-left:20px;')
+            input#deleteButton(type='button', value='Delete')
 div#foot
   a(href='http://mongoose-admin.com') Mongoose-Admin
