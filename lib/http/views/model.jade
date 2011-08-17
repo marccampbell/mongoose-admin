@@ -22,6 +22,14 @@ div#content.container_16.clearfix
           - }
       - }
     p
+      | Viewing #{start + 1} - #{start + documents.length} of #{totalCount}
+      | &nbsp;&nbsp;-&nbsp;&nbsp;Page:&nbsp;
+      - for (var i = 0, page = 1; i < totalCount; i += count, page++)
+        - if (start == i)
+          #{page}
+        - else
+          a(href='#{rootPath}/model/#{modelName}?start=#{i}') #{page}
+    p
       | <a href='#{rootPath}/model/#{modelName}/document/new'>Create new <em>"#{modelName}"</em> item...</a>
   div.grid_5
     h2 Recent Activity
