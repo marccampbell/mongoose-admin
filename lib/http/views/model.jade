@@ -16,13 +16,13 @@ div#content.container_16.clearfix
           - for (var k = 0; k < listFields.length; k++) {
             td
               - if (k === 0) 
-                a(href='/model/#{modelName}/document/#{documents[j]._id}') #{documents[j][listFields[k]]}
+                a(href='#{rootPath}/model/#{modelName}/document/#{documents[j]._id}') #{documents[j][listFields[k]]}
               - else
                 #{documents[j][listFields[k]]}
           - }
       - }
     p
-      | <a href='/model/#{modelName}/document/new'>Create new <em>"#{modelName}"</em> item...</a>
+      | <a href='#{rootPath}/model/#{modelName}/document/new'>Create new <em>"#{modelName}"</em> item...</a>
   div.grid_5
     h2 Recent Activity
     p

@@ -2,7 +2,7 @@
     "name": "mongoose-admin"
   , "description": "automatic admin tool and admin pages for mongoose"
   , "keywords": ["mongoose", "mongo", "admin"]
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "homepage": "http://www.github.com/marccampbell/mongoose-admin"
   , "repository": "git://github.com/marccampbell/mongoose-admin.git"
   , "author": "Marc Campbell <marc.e.campbell@gmail.com> (http://twitter.com/mccode)"

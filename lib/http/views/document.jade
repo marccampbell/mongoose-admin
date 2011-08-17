@@ -4,10 +4,10 @@ script(type='text/javascript')
       var method = $('#document_id').val().length > 0 ? 'PUT' : 'POST';
       $.ajax({
         type:method,
-        url:'/json/model/#{modelName}/document',
+        url:'#{rootPath}/json/model/#{modelName}/document',
         data:$('#document').serialize(),
         success:function(result) {
-          window.location.href = '/model/' + result.collection;
+          window.location.href = '#{rootPath}/model/' + result.collection;
         },
         error:function(xhr, textStatus) {
           alert('Unable to save');
@@ -18,7 +18,7 @@ script(type='text/javascript')
     $('#deleteButton').click(function() {
       $.ajax({
         type:'DELETE',
-        url:'/json/model/#{modelName}/document?document_id=' + encodeURIComponent($('#document_id').val()),
+        url:'#{rootPath}/json/model/#{modelName}/document?document_id=' + encodeURIComponent($('#document_id').val()),
         success:function(result) {
           window.location.href = '/model/' + result.collection;
         },
@@ -35,7 +35,7 @@ script(type='text/javascript')
       } else {
         $.ajax({
           type:'GET',
-          url:'/json/model/' + $(this).val() + '/linkedDocumentsList',
+          url:'#{rootPath}/json/model/' + $(this).val() + '/linkedDocumentsList',
           success:function(result) {
             console.log(self.attr('rel'));
             var documentList = $('#' + self.attr('rel'));

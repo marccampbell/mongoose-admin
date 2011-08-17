@@ -3,7 +3,7 @@ script(type='text/javascript')
     $.each($('.model'), function(k, v) {
       var self = $(this);
       $.ajax({type:   'GET',
-              url:    '/json/documents',
+              url:    '#{rootPath}/json/documents',
               data:   'collection=' + encodeURIComponent($(this).attr('rel')) +
                       '&start=0&count=5',
               success:function(results) {
@@ -15,7 +15,7 @@ script(type='text/javascript')
                           for (j in v) {
                             if (j != '_id') {
                               if (i === 0) {
-                                row.append($('<td />').append($('<a />').attr('href', '/model/' + self.attr('rel') + '/document/' + v['_id']).html(v[j])));
+                                row.append($('<td />').append($('<a />').attr('href', '#{rootPath}/model/' + self.attr('rel') + '/document/' + v['_id']).html(v[j])));
                               } else {
                                 row.append($('<td />').html(v[j]));
                               }
@@ -39,9 +39,9 @@ div#content.container_16.clearfix
       div.model(id='model_#{model.collection.name}', rel='#{model.collection.name}')
         img(src='/images/loading-spinner.gif')
       p 
-        a(href='/model/#{model.collection.name}/document/new') New...
+        a(href='#{rootPath}/model/#{model.collection.name}/document/new') New...
         | &nbsp;|&nbsp;
-        a(href='/model/#{model.collection.name}') View All...
+        a(href='#{rootPath}/model/#{model.collection.name}') View All...
   div.grid_5
     h2 Recent Activity
     p 

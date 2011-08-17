@@ -28,10 +28,10 @@ script(type='text/javascript')
                      '&password=' + encodeURIComponent($('#password').val());
       $.ajax({
         type:'POST',
-        url:'/json/login',
+        url:'./json/login',
         data:postData,
         success:function(result) {
-          window.location.href = '/';
+          window.location.href = './';
         },
         error:function(xhr, textStatus) {
           alert(textStatus);

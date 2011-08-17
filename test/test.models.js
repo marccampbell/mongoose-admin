@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost/mongoose-admin');
 var modelSchema = new mongoose.Schema(modelData);
 mongoose.model('Model', modelSchema);
 
-var admin = mongoose_admin.createAdmin('mongodb://localhost/mongoose-admin', 8001);
+var admin = mongoose_admin.createAdmin('mongodb://localhost/mongoose-admin', {port:8001});
 admin.registerModel('Model', modelData, {'list':['stringField'], 'sort':['dateField']});
 
 admin.getRegisteredModels(function(err, models) {
