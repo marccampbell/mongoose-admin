@@ -219,7 +219,7 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 	padding:2px 6px;
 }
 
-input.document_input {
+input.document_input, select.document_input {
     width:200px;
 }
 
