@@ -223,6 +223,10 @@ input.document_input, select.document_input {
     width:200px;
 }
 
+textarea.document_input {
+    width:400px;
+    height:200px;
+}
 label.required_label {
     display:inline;
     font-weight:bold;
