@@ -219,10 +219,14 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 	padding:2px 6px;
 }
 
-input.document_input {
+input.document_input, select.document_input {
     width:200px;
 }
 
+textarea.document_input {
+    width:400px;
+    height:200px;
+}
 label.required_label {
     display:inline;
     font-weight:bold;
